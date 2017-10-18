@@ -9,13 +9,16 @@ If you would prefer to use your own boilerplate/setup feel free to.
 
 ## Requirements
 Implement a responsive web application that follows the following designs.
+
 Mobile - https://cdn.zeplin.io/59dcef779ee5b755ceb376f3/screens/93FB2FFB-EC42-4DAC-A434-6BB760E6109A.png
+
 Desktop - https://cdn.zeplin.io/59dcef779ee5b755ceb376f3/screens/076AC023-A27D-488C-8E85-698745374675.png
 
 We have setup an online tool to help you extract css properties from the designs for your convienence.
 https://app.zeplin.io/project/59dcef779ee5b755ceb376f3/dashboard
 
 username: getsnaptravel
+
 password: getsnaptravel
 
 The App functionality should be as follows.

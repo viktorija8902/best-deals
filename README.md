@@ -32,8 +32,8 @@ Only the following elements should be visible on first load.
 
 The 3 inputs will be string inputs. Do not worry about form validation.
 
-TODO: SPECIFY ENDPOINT
-When the Search button is clicked make 2 HTTP post requests to 'ENDPOINT_URL' with the following request body
+
+When the Search button is clicked make 2 HTTP post requests to 'https://experimentation.getsnaptravel.com/interview/hotels' with the following request body
 
 ```
 {
@@ -83,10 +83,8 @@ The sorting logic of the three types is as follows:
 - Rating - Sort by the number of reviews
 - Savings - Sort by the amount the difference between retail price and snaptravel price.
 
-
-TODO: email contact
 ## Notes
-* If you run into any technical difficulties contact XXXXXX
+* If you run into any technical difficulties contact henry@getsnaptravel.com
 * If you wish to write tests the boilerplate supports it but it is not a strict requirement.
 * Sass is supported.
 

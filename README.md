@@ -55,7 +55,7 @@ When the Search button is clicked, make **2 HTTP POST requests** in parallel to 
 }
 ```
 
-1) This will return SnapTravel rates for hotels in the city (the rate shown on the right and in green in the design)
+1) This above return SnapTravel rates for hotels in the city (the rate shown on the right and in green in the design)
 
 
 ```
@@ -67,11 +67,11 @@ When the Search button is clicked, make **2 HTTP POST requests** in parallel to 
 }
 ```
 
-2) This will return Hotels.com rates for hotels in the city (the rate shown on the left and in red in the design)
+2) This above return Hotels.com rates for hotels in the city (the rate shown on the left and in red in the design)
 
 The responses will be a json which has an array of hotels and prices.
 ```
-{
+[{
   id : 12,
   hotel_name : 'Center Hilton',
   num_reviews : 209,
@@ -80,7 +80,9 @@ The responses will be a json which has an array of hotels and prices.
   amenities : ['Wi-Fi', 'Parking'],
   image_url : 'https://images.trvl-media.com/hotels/1000000/20000/19600/19558/19558_410_b.jpg',
   price : 132.11
-}
+},
+...
+]
 ```
 
 After both these calls have returned take **only** the hotels that appear in both the responses to render the list of hotels and prices as per the design.

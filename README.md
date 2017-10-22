@@ -16,7 +16,7 @@ Implement a responsive web application that follows the following designs and fu
 
 ### Design
 
-**Mobile** ![](https://cdn.zeplin.io/59dcef779ee5b755ceb376f3/screens/93FB2FFB-EC42-4DAC-A434-6BB760E6109A.png)
+**Mobile** ![](https://cdn.zeplin.io/59dcef779ee5b755ceb376f3/screens/FE1DFBA7-3235-4B28-BAAA-B8C4F3AFC56A.png)
 
 **Desktop** ![](https://cdn.zeplin.io/59dcef779ee5b755ceb376f3/screens/076AC023-A27D-488C-8E85-698745374675.png)
 
@@ -29,7 +29,7 @@ password: getsnaptravel
 
 ### Functionality
 
-** Step 1 **
+**Step 1**
 
 Only the following elements should be visible on first load.
 - Header
@@ -40,7 +40,7 @@ Only the following elements should be visible on first load.
 
 The 3 inputs will be string inputs. Do not worry about form validation and no need for any fancy datepicker or autocomplete functionalities.
 
-** Step 2 **
+**Step 2**
 
 When the Search button is clicked, make **2 HTTP POST requests** in parallel to 'https://experimentation.getsnaptravel.com/interview/hotels' with the following request body
 
@@ -83,12 +83,12 @@ The responses will be a json which has an array of hotels and prices.
 
 After both these calls have returned take **only** the hotels that appear in both the responses to render the list of hotels and prices as per the design.
 
-For example, if the first call returned hotels with id [1,2] with prices 100 and 200 and the second call returned hotels [2,3] with prices 200 and 300 respectively, you would only render hotel 3 in the list with a Hotels.com price of 300 and a SnapTravel price of 200, as shown below:
+For example, if the first call returned hotels with id [1,2] with SnapTravel prices 110 and 210 and the second call returned hotels [2,3] with Hotels.com prices 250 and 350 respectively, you would only render hotel 2 in the list with a Hotels.com price of 250 and a SnapTravel price of 210, as shown below:
 
-![](https://i.imgur.com/RAV0JsR.png)
+![](https://i.imgur.com/s1pIdcy.png)
 
 
-** Step 3 **
+**Step 3**
 
 The list of hotels should be sorted based on the currently selected  sorting type (default to sort by price, lowest first).
 

@@ -16,9 +16,11 @@ Implement a responsive web application that follows the following designs and fu
 
 ### Design
 
-**Mobile** ![](https://cdn.zeplin.io/59dcef779ee5b755ceb376f3/screens/FE1DFBA7-3235-4B28-BAAA-B8C4F3AFC56A.png)
+**Mobile**
+![](https://cdn.zeplin.io/59dcef779ee5b755ceb376f3/screens/FE1DFBA7-3235-4B28-BAAA-B8C4F3AFC56A.png)
 
-**Desktop** ![](https://cdn.zeplin.io/59dcef779ee5b755ceb376f3/screens/076AC023-A27D-488C-8E85-698745374675.png)
+**Desktop**
+![](https://cdn.zeplin.io/59dcef779ee5b755ceb376f3/screens/076AC023-A27D-488C-8E85-698745374675.png)
 
 We have setup an online tool to help you extract css properties from the designs for your convienence.
 https://app.zeplin.io/project/59dcef779ee5b755ceb376f3/dashboard

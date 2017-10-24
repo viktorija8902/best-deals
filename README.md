@@ -1,5 +1,5 @@
 # Frontend Demo
-This is our front-end task for potential new engineers. We expect this this task to take less than an afternoon's worth of work. If you are time constrained, please let us know how much time you have allocated to this and how much you were able to get done.
+This is our front-end task for potential new engineers. We expect this task to take less than an afternoon's worth of work. If you are time constrained, please let us know how much time you have allocated to this and how much you were able to get done.
 
 We've setup an empty boilerplate with create-react-app. Make sure you have node and npm installed and run ```npm install``` and then ```npm start``` to test your application. To run your tests you can run ```npm test```.
 

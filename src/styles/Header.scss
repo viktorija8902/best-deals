@@ -1,0 +1,26 @@
+// variables:
+$orange: #ff8314;
+
+.header {
+  display: flex;
+  align-items: center;
+  .title {
+    width: 146px;
+    font-size: 32px;
+    font-weight: 600;
+    color: $orange;
+    text-align: left;
+    padding-left: 15px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background-color: $orange;
+    img {
+      width: 55px;
+    }
+  }
+}

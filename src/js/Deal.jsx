@@ -1,7 +1,62 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function Deal(props) {
-  return <h1>Hello, {props.hotelInfo.id}, {props.dealPrice} </h1>;
+class Deal extends Component {
+  getStars(starsNumber) {
+    let number = 0;
+    let starsArray = []
+    while (number < starsNumber) {
+      starsArray = starsArray.concat(number);
+      number++;
+    }
+    const stars = starsArray.map((star) => {
+      return <img  key={star.toString()} src="images/star.png" alt=""></img>
+    })
+    return stars;
+  }
+
+  render() {
+    const stars = this.getStars(this.props.hotelInfo.num_stars);
+    const amenities = this.props.hotelInfo.amenities.map((amenity) => {
+      return <div key={amenity.toString()} className="amenity">{amenity}</div>
+    })
+    return (
+      <div className="deal">
+        <div className="hotel-info">
+          <img src={this.props.hotelInfo.image_url} alt=""></img>
+          <div className="details">
+            <div className="name">{this.props.hotelInfo.hotel_name}</div>
+            <div className="address">{this.props.hotelInfo.address}</div>
+            <div className="columns">
+              <div className="left-column">
+                <div className="stars">{stars}</div>
+                <div className="reviews">{this.props.hotelInfo.num_reviews} Reviews</div>
+              </div>
+              <div className="right-column">
+                <div className="amenities">{amenities}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="prices">
+          <div className="regular-price-box">
+            <div className="regular-price">
+              USD${this.props.hotelInfo.price}
+            </div>
+            <img className="hotels-com-logo" src="images/hotels_com_logo.png" alt=""></img>
+          </div>
+          <div className="deal-price-box">
+            <div className="deal-price">
+              USD${this.props.dealPrice}
+            </div>
+            <div className="view-details-btn">
+              <div className="text">View Details</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 }
 
 export default Deal;

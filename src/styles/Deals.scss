@@ -7,7 +7,7 @@
   .deal {
     display: flex;
     border-radius: 2px;
-    background-color: #ffffff;
+    background-color: $white;
     box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.18);
     padding: 21px 22px 25px 22px;
     font-family: Lato;
@@ -21,18 +21,19 @@
       }
       .details {
         padding: 5px 16px;
+        .name, address {
+          color: $grey;
+        }
         .name {
           width: 282px;
           font-size: 22px;
           font-weight: 600;
           text-align: left;
-          color: #686868;
         }
         .address {
           padding-top: 10px;
           font-size: 12px;
           text-align: left;
-          color: #686868;
         }
         .columns {
           display: flex;
@@ -54,7 +55,7 @@
               font-size: 16px;
               font-weight: 500;
               text-align: left;
-              color: #686868;
+              color: $grey;
             }
           }
           .right-column {
@@ -64,7 +65,7 @@
                 font-size: 16px;
                 font-weight: 500;
                 text-align: left;
-                color: #686868;
+                color: $grey;
               }
               .amenity:first-child {
                 padding-top: 0px;
@@ -82,7 +83,7 @@
         width: 246px;
         height: 177px;
         border-radius: 5px;
-        border: solid 1px #d0021b;
+        border: solid 1px $red;
         .regular-price, .deal-price {
           height: 42px;
           font-size: 35px;
@@ -90,10 +91,10 @@
           padding-top: 38px;
         }
         .regular-price {
-          color: #d0021b;
+          color: $red;
         }
         .deal-price {
-          color: #417505;
+          color: $dark-green;
         }
         .hotels-com-logo {
           width: 110px;
@@ -105,13 +106,13 @@
           height: 44px;
           margin: 23px auto 23px auto;
           border-radius: 4px;
-          background-color: #4f9f22;
+          background-color: $green;
           box-shadow: 0 2px 4px 0 rgba(79, 159, 34, 0.5);
           .text {
             padding-top: 10px;
             font-size: 18px;
             font-weight: 500;
-            color: #ffffff;
+            color: $white;
             text-align: center;
           }
         }

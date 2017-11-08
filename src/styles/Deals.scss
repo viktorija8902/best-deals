@@ -1,9 +1,11 @@
+
+@import "./variables.scss";
+
 .deals {
-  width: 90%;
-  margin: auto;
+  width: $break-point;
+  margin: 0 auto 82px auto;
   .deal {
     display: flex;
-    width: 1099px;
     border-radius: 2px;
     background-color: #ffffff;
     box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.18);
@@ -76,14 +78,12 @@
       width: 50%;
       display: flex;
       justify-content: flex-end;
-      .regular-price-box,
-      .deal-price-box {
+      .regular-price-box, .deal-price-box {
         width: 246px;
         height: 177px;
         border-radius: 5px;
         border: solid 1px #d0021b;
-        .regular-price,
-        .deal-price {
+        .regular-price, .deal-price {
           height: 42px;
           font-size: 35px;
           text-align: center;
@@ -120,5 +120,94 @@
         margin-right: 20px;
       }
     }
+  }
+}
+
+@media (max-width: $break-point) {
+  .deals {
+    width: 351px;
+    margin: 18px auto 59px auto;
+    .deal {
+      display: block;
+      padding: 12px 10px;
+      .hotel-info, .prices {
+        width: 100%;
+      }
+      .hotel-info {
+        img {
+          width: 103px;
+          height: 100px;
+        }
+        .details {
+          padding: 5px 16px;
+          .name {
+            width: 188px;
+            font-size: 16px;
+          }
+          .address {
+            display: none;
+          }
+          .columns {
+            padding-top: 8px;
+            .left-column {
+              .stars {
+                img {
+                  width: 13px;
+                  height: 12px;
+                }
+              }
+              .reviews {
+                padding-top: 12px;
+                font-size: 13px;
+              }
+            }
+            .right-column {
+              .amenities {
+                .amenity {
+                  padding-top: 7px;
+                  font-size: 13px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .prices {
+        justify-content: flex-start;
+        padding-top: 8px;
+        .regular-price-box, .deal-price-box {
+          width: 162px;
+          height: 94px;
+          .regular-price, .deal-price {
+            padding-top: 13px;
+            height: 27px;
+            font-size: 24px;
+          }
+          .hotels-com-logo {
+            width: 71px;
+            height: 10px;
+            padding-top: 16px;
+          }
+          .view-details-btn {
+            width: 108px;
+            height: 28px;
+            margin: 7px auto 19px auto;
+            .text {
+              padding-top: 4px;
+              font-size: 14px;
+            }
+          }
+        }
+        .regular-price-box {
+          margin-right: 7px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .deals {
+    width: 98%;
   }
 }

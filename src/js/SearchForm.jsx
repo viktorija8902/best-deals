@@ -94,7 +94,7 @@ class SearchForm extends Component {
         event.preventDefault();
     }
 
-    render() {
+    findHotelsExistingInBothSystems() {
         let hotelsRegularPrices = {};
         this.state.regularPrices.forEach(hotel => {
             hotelsRegularPrices[hotel.id] = hotel;
@@ -108,24 +108,31 @@ class SearchForm extends Component {
                 filteredHotels = filteredHotels.concat(hotel);
             }
         })
-                           
-        let sortedResults;
+        return filteredHotels;
+    }
+
+    sortHotels(hotels) {
         if (this.state.sortedByPrice) {
-            sortedResults = filteredHotels.sort(function (a, b) {
+            return hotels.sort(function (a, b) {
                 return a.price - b.price;
             });
-        } else if (this.state.sortedByRating) {
-            sortedResults = filteredHotels.sort(function (a, b) {
+        }
+        if (this.state.sortedByRating) {
+            return hotels.sort(function (a, b) {
                 return b.num_stars - a.num_stars;
             });
-        } else if (this.state.sortedBySavings) {
-            sortedResults = filteredHotels.sort(function (a, b) {
+        }
+        if (this.state.sortedBySavings) {
+            return hotels.sort(function (a, b) {
                 return b.savings - a.savings;
             });
-        } else {
-            sortedResults = filteredHotels;
         }
+        return hotels;
+    }
 
+    render() {
+        const commonHotels = this.findHotelsExistingInBothSystems();
+        const results = this.sortHotels(commonHotels);
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
@@ -137,7 +144,7 @@ class SearchForm extends Component {
                 <button className="sorting-btn" onClick={this.sortByPrice}>Price</button>
                 <button className="sorting-btn" onClick={this.sortByRating}>Rating</button>
                 <button className="sorting-btn" onClick={this.sortBySavings}>Savings</button>
-                <Deals results={sortedResults} />
+                <Deals results={results} />
             </div>
         );
     }

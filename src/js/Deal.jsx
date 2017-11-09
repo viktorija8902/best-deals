@@ -41,13 +41,13 @@ class Deal extends Component {
         <div className="prices">
           <div className="regular-price-box">
             <div className="regular-price">
-              USD${this.props.hotelInfo.price}
+              USD${this.props.hotelInfo.regular_price}
             </div>
             <img className="hotels-com-logo" src="images/hotels_com_logo.png" alt=""></img>
           </div>
           <div className="deal-price-box">
             <div className="deal-price">
-              USD${this.props.dealPrice}
+              USD${this.props.hotelInfo.price}
             </div>
             <div className="view-details-btn">
               <div className="text">View Details</div>

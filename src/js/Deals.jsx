@@ -3,22 +3,13 @@ import Deal from "./Deal";
 
 class Deals extends Component {
   render() {
-    let hotelsRegularPrices = {};
-    this.props.regularPrices.forEach(hotel => {
-      hotelsRegularPrices[hotel.id] = hotel;
-    });
-    const filteredHotels = this.props.deals.map(hotel => {
-      if (hotel.id in hotelsRegularPrices) {
-        return (
-          <Deal
-            key={hotel.id.toString()}
-            hotelInfo={hotelsRegularPrices[hotel.id]}
-            dealPrice={hotel.price}
-          />
-        );
-      } else {
-        return null;
-      }
+    const filteredHotels = this.props.results.map(hotel => {
+      return (
+        <Deal
+          key={hotel.id.toString()}
+          hotelInfo={hotel}
+        />
+      );
     });
     return <div className="deals">{filteredHotels}</div>;
   }

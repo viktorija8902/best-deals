@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HotelImage from "./HotelImage";
 import RegularPriceBox from "./RegularPriceBox";
+import DealPriceBox from "./DealPriceBox";
 
 class Deal extends Component {
   getStars(starsNumber) {
@@ -42,14 +43,7 @@ class Deal extends Component {
 
         <div className="prices">
           <RegularPriceBox savings={this.props.hotelInfo.savings} regularPrice = {this.props.hotelInfo.regular_price}/>
-          <div className="deal-price-box">
-            <div className="deal-price">
-              USD${this.props.hotelInfo.price}
-            </div>
-            <div className="view-details-btn">
-              <div className="text">View Details</div>
-            </div>
-          </div>
+          <DealPriceBox dealPrice = {this.props.hotelInfo.price}/>
         </div>
       </div>
     )

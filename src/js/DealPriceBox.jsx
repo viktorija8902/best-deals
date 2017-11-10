@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class DealPriceBox extends Component {
   render() {
@@ -12,5 +13,8 @@ class DealPriceBox extends Component {
     );
   }
 }
+DealPriceBox.propTypes = {
+  dealPrice: PropTypes.number
+};
 
 export default DealPriceBox;

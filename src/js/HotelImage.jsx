@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class HotelImage extends Component {
   render() {
@@ -15,5 +16,9 @@ class HotelImage extends Component {
     return <img src={this.props.image} alt=""></img>
   }
 }
+HotelImage.propTypes = {
+  image: PropTypes.string,
+  savingsInfo: PropTypes.number
+};
 
 export default HotelImage;

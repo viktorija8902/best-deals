@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class RegularPriceBox extends Component {
   render() {
@@ -30,5 +31,9 @@ class RegularPriceBox extends Component {
     );
   }
 }
+RegularPriceBox.propTypes = {
+  savings: PropTypes.number,
+  regularPrice: PropTypes.number
+};
 
 export default RegularPriceBox;

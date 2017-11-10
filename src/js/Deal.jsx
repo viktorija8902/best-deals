@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+
 import HotelImage from "./HotelImage";
 import RegularPriceBox from "./RegularPriceBox";
 import DealPriceBox from "./DealPriceBox";
@@ -26,5 +28,8 @@ class Deal extends Component {
     )
   }
 }
+Deal.propTypes = {
+  hotelInfo: PropTypes.object
+};
 
 export default Deal;

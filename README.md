@@ -1,14 +1,8 @@
 # Frontend Demo
-This is our front-end task for potential new engineers. We expect this task to take less than an afternoon's worth of work. If you are time constrained, please let us know how much time you have allocated to this and how much you were able to get done.
 
-We've setup an empty boilerplate with create-react-app. Make sure you have node and npm installed and run ```npm install``` and then ```npm start``` to test your application. To run your tests you can run ```npm test```.
+This is a task I did for one company when I applied for a software developer's job. Boilerplate and system which is called by my API was set by them. They also set up an online tool to help me extract css properties from the designs.
 
-
-If you would prefer to use your own boilerplate, setup or frontend framework, please feel free to do so.
-
-
-Please clone this repo, create your own branch 'firstname-lastname' and make a starting commit with the message 'start'.
-Commit your code to your branch and push your branch to origin when you are finished. Thanks 😄
+Make sure you have node and npm installed and run ```npm install``` and then ```npm start``` to test your application. To run your tests you can run ```npm test```.
 
 ## TODO
 
@@ -21,13 +15,6 @@ Implement a responsive web application that follows the following designs and fu
 
 **Desktop**
 ![](https://cdn.zeplin.io/59dcef779ee5b755ceb376f3/screens/076AC023-A27D-488C-8E85-698745374675.png)
-
-We have setup an online tool to help you extract css properties from the designs for your convienence.
-https://app.zeplin.io/project/59dcef779ee5b755ceb376f3/dashboard
-
-username: getsnaptravel
-
-password: getsnaptravel
 
 ### Functionality
 
@@ -105,8 +92,3 @@ The sorting logic of the three types is as follows:
 - Savings - Sort by the difference between the Hotels.com price and the SnapTravel price, largest differences first
 
 The currently selected sorting type should highlighted as shown in the design.
-
-## Notes
-* If you run into any technical difficulties contact henry@getsnaptravel.com
-* If you wish to write tests the boilerplate supports it but it is not a strict requirement.
-* Sass is supported.

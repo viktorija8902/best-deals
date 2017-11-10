@@ -7,6 +7,10 @@ export function getHotels(body) {
         },
         body: body
     }).then(response => {
-        return response.json();      
+        if (response.status === 200) {
+            return response.json(); 
+        } else {
+            return "Error";
+        }   
     })
 }

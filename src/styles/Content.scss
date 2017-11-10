@@ -1,8 +1,10 @@
 @import "./variables.scss";
 
+.search-form, .error {
+  width: $break-point;
+  margin: 22px auto 0 auto;
+}
 .search-form {
-    width: $break-point;
-    margin: 22px auto 0 auto;
     text-align: left;
     display: flex;
     input, button {
@@ -34,11 +36,19 @@
         }
     }
 }
+.error {
+  padding-top: 25px;
+  text-align: left;
+  font-weight: bold;
+  color: $red;
+}
 
 @media (max-width: $break-point) {
-    .search-form {
+    .search-form, .error {
       width: 351px;
       margin: 0 auto 0 auto;
+    }
+    .search-form {
       flex-wrap: wrap;
       input, button {
         margin-top: 18px;
@@ -54,7 +64,7 @@
   }
   
   @media (max-width: 370px) {
-    .search-form {
+    .search-form, .error {
       width: 98%;
     }
   }

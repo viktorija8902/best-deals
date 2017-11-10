@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import '../styles/index.css';
 import Header from "./Header";
-import SearchForm from "./SearchForm";
+import Content from "./Content";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Header/>
-        <SearchForm/>
+        <Content/>
       </div>
     );
   }

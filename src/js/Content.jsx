@@ -4,7 +4,8 @@ import {getHotels} from "./services/HotelsApi";
 import Deals from "./Deals";
 import SortingMenu from "./SortingMenu";
 
-class SearchForm extends Component {
+//TODO refactor
+class Content extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -169,4 +170,4 @@ class SearchForm extends Component {
     }
 }
 
-export default SearchForm;
+export default Content;

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class SortingMenu extends Component {
   constructor(props) {
@@ -84,5 +85,13 @@ class SortingMenu extends Component {
     );
   }
 }
+SortingMenu.propTypes = {
+  sortedByPrice: PropTypes.bool,
+  sortedByRating: PropTypes.bool,
+  sortedBySavings: PropTypes.bool,
+  sortByPrice: PropTypes.func,
+  sortByRating: PropTypes.func,
+  sortBySavings: PropTypes.func
+};
 
 export default SortingMenu;

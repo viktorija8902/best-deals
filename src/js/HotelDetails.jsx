@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class HotelDetails extends Component {
   getStars(starsNumber) {
@@ -43,5 +44,12 @@ class HotelDetails extends Component {
     );
   }
 }
+HotelDetails.propTypes = {
+  stars: PropTypes.number,
+  amenities: PropTypes.array,
+  name: PropTypes.string,
+  address: PropTypes.string,
+  reviewsNumber: PropTypes.number
+};
 
 export default HotelDetails;

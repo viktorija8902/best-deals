@@ -11,13 +11,16 @@
     background-color: #f0f0f0;
     margin-top: 18px;
     margin-right: 15px;
+    padding-left: 16px;
     border: 2px solid #f0f0f0;
+    cursor: pointer;
     .text {
       font-family: Lato;
       font-size: 20px;
       font-weight: bold;
       text-align: left;
       color: #7c7c7c;
+      line-height: 0;
     }
   }
   .sorting-btn.selected {

@@ -14,7 +14,7 @@ class Content extends Component {
             checkOut: "",
             deals: [],
             regularPrices: [],
-            sortedByPrice: false,
+            sortedByPrice: true,
             sortedByRating: false,
             sortedBySavings: false,
             showSortingMenu: false,
@@ -136,7 +136,6 @@ class Content extends Component {
                 return b.savings - a.savings;
             });
         }
-        return hotels;
     }
 
     render() {

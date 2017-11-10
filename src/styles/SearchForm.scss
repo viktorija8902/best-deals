@@ -1,0 +1,68 @@
+@import "./variables.scss";
+
+.search-form {
+    width: $break-point;
+    margin: 22px auto 0 auto;
+    text-align: left;
+    display: flex;
+    input, button {
+        height: 43px;
+        border-radius: 5px;
+        border: 0;
+        background-color: $white;
+        box-shadow: 0 0 4px 0 #c4c4c4;
+    }
+    input {
+        width: 129px;
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: left;
+        color: #787878;
+        padding: 0 0 0 13px;
+        margin-right: 22px;
+    }
+    input:first-child {
+        width: 229px;
+    }
+    button {
+        width: 46px;
+        box-shadow: 0 0 4px 0 #bbbbbb;
+        img {
+            height: 21px;
+        }
+    }
+}
+
+@media (max-width: $break-point) {
+    .search-form {
+      width: 351px;
+      margin: 0 auto 0 auto;
+      flex-wrap: wrap;
+      input, button {
+        margin-top: 18px;
+      }
+      input {
+        width: 129px;
+        margin-right: 7px;
+      }
+      input:first-child {
+        width: 335px;
+      }
+    }
+  }
+  
+  @media (max-width: 370px) {
+    .search-form {
+      width: 98%;
+    }
+  }
+
+  @media (max-width: 350px) {
+    .search-form {
+      button {
+        width: 45%;
+      }
+    }
+  }
+  

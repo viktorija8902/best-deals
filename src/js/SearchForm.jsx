@@ -136,12 +136,12 @@ class SearchForm extends Component {
         const results = this.sortHotels(commonHotels);
         return (
             <div>
-                <form onSubmit={this.handleSubmit}>
+                <div className="search-form">
                     <input placeholder="Search By City" type="text" value={this.state.city} onChange={this.handleCityChange} />
                     <input placeholder="Check-In" type="text" value={this.state.checkIn} onChange={this.handleCheckInChange} />
                     <input placeholder="Check-Out" type="text" value={this.state.checkOut} onChange={this.handleCheckOutChange} />
-                    <input type="submit" value="Submit"/>
-                </form>
+                    <button onClick={this.handleSubmit}><img src="images/search_btn.png" alt="Search"></img></button>
+                </div>
                 <SortingMenu 
                     sortedByPrice={this.state.sortedByPrice}
                     sortByPrice={this.sortByPrice}

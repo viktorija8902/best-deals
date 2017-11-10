@@ -2,7 +2,6 @@
 
 .sorting-menu {
   display: flex;
-  padding-top: 18px;
   width: 1099px;
   margin: auto;
   .sorting-btn {
@@ -10,6 +9,7 @@
     height: 46px;
     border-radius: 3px;
     background-color: #f0f0f0;
+    margin-top: 18px;
     margin-right: 15px;
     border: 2px solid #f0f0f0;
     .text {
@@ -36,9 +36,7 @@
   .sorting-menu {
     display: block;
     width: 351px;
-    margin: 0 auto 18px auto;
     .sorting-btn {
-      margin-top: 18px;
       padding: 12px 10px;
       width: 100%;
     }

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import {getHotels} from "./services/HotelsApi";
 import Deals from "./Deals";
+import SortingMenu from "./SortingMenu";
 
 class SearchForm extends Component {
     constructor(props) {
@@ -141,9 +142,16 @@ class SearchForm extends Component {
                     <input placeholder="Check-Out" type="text" value={this.state.checkOut} onChange={this.handleCheckOutChange} />
                     <input type="submit" value="Submit"/>
                 </form>
-                <button className="sorting-btn" onClick={this.sortByPrice}>Price</button>
-                <button className="sorting-btn" onClick={this.sortByRating}>Rating</button>
-                <button className="sorting-btn" onClick={this.sortBySavings}>Savings</button>
+                <SortingMenu 
+                    sortedByPrice={this.state.sortedByPrice}
+                    sortByPrice={this.sortByPrice}
+
+                    sortedByRating={this.state.sortedByRating}
+                    sortByRating={this.sortByRating}
+                    
+                    sortedBySavings={this.state.sortedBySavings}
+                    sortBySavings={this.sortBySavings}
+                />
                 <Deals results={results} />
             </div>
         );

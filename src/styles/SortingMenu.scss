@@ -1,0 +1,52 @@
+@import "./variables.scss";
+
+.sorting-menu {
+  display: flex;
+  padding-top: 18px;
+  width: 1099px;
+  margin: auto;
+  .sorting-btn {
+    width: 357px;
+    height: 46px;
+    border-radius: 3px;
+    background-color: #f0f0f0;
+    margin-right: 15px;
+    border: 2px solid #f0f0f0;
+    .text {
+      font-family: Lato;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: #7c7c7c;
+    }
+  }
+  .sorting-btn.selected {
+    background-color: $white;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      height: 20px;
+    }
+  }
+}
+
+@media (max-width: $break-point) {
+  .sorting-menu {
+    display: block;
+    width: 351px;
+    margin: 0 auto 18px auto;
+    .sorting-btn {
+      margin-top: 18px;
+      padding: 12px 10px;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .sorting-menu {
+    width: 98%;
+  }
+}

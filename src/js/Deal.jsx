@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import HotelImage from "./HotelImage";
 
 class Deal extends Component {
   getStars(starsNumber) {
@@ -22,7 +23,7 @@ class Deal extends Component {
     return (
       <div className="deal">
         <div className="hotel-info">
-          <img src={this.props.hotelInfo.image_url} alt=""></img>
+          <HotelImage image = {this.props.hotelInfo.image_url} savingsInfo={this.props.hotelInfo.savings} />
           <div className="details">
             <div className="name">{this.props.hotelInfo.hotel_name}</div>
             <div className="address">{this.props.hotelInfo.address}</div>

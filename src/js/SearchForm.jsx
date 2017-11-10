@@ -15,7 +15,8 @@ class SearchForm extends Component {
             regularPrices: [],
             sortedByPrice: false,
             sortedByRating: false,
-            sortedBySavings: false
+            sortedBySavings: false,
+            showSortingMenu: false,
         };
 
         this.handleCityChange = this.handleCityChange.bind(this);
@@ -89,10 +90,16 @@ class SearchForm extends Component {
         })
     }
 
+    showSortingMenu() {
+        this.setState({
+            showSortingMenu: true
+        })
+    }
+
     handleSubmit(event) {
         this.getDeals();
         this.getRegularPrices();
-        event.preventDefault();
+        this.showSortingMenu();
     }
 
     findHotelsExistingInBothSystems() {
@@ -142,16 +149,18 @@ class SearchForm extends Component {
                     <input placeholder="Check-Out" type="text" value={this.state.checkOut} onChange={this.handleCheckOutChange} />
                     <button onClick={this.handleSubmit}><img src="images/search_btn.png" alt="Search"></img></button>
                 </div>
-                <SortingMenu 
-                    sortedByPrice={this.state.sortedByPrice}
-                    sortByPrice={this.sortByPrice}
+                {this.state.showSortingMenu &&
+                    <SortingMenu
+                        sortedByPrice={this.state.sortedByPrice}
+                        sortByPrice={this.sortByPrice}
 
-                    sortedByRating={this.state.sortedByRating}
-                    sortByRating={this.sortByRating}
-                    
-                    sortedBySavings={this.state.sortedBySavings}
-                    sortBySavings={this.sortBySavings}
-                />
+                        sortedByRating={this.state.sortedByRating}
+                        sortByRating={this.sortByRating}
+                        
+                        sortedBySavings={this.state.sortedBySavings}
+                        sortBySavings={this.sortBySavings}
+                    />
+                }
                 <Deals results={results} />
             </div>
         );

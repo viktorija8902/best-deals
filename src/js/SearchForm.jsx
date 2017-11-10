@@ -112,7 +112,7 @@ class SearchForm extends Component {
         this.state.deals.forEach(hotel => {
             if (hotel.id in hotelsRegularPrices) {
                 hotel["regular_price"] = hotelsRegularPrices[hotel.id].price;
-                hotel["savings"] = hotel["regular_price"] - hotel["price"];
+                hotel["savings"] = Math.round(hotel["regular_price"] - hotel["price"]);
                 filteredHotels = filteredHotels.concat(hotel);
             }
         })
@@ -149,19 +149,21 @@ class SearchForm extends Component {
                     <input placeholder="Check-Out" type="text" value={this.state.checkOut} onChange={this.handleCheckOutChange} />
                     <button onClick={this.handleSubmit}><img src="images/search_btn.png" alt="Search"></img></button>
                 </div>
-                {this.state.showSortingMenu &&
-                    <SortingMenu
-                        sortedByPrice={this.state.sortedByPrice}
-                        sortByPrice={this.sortByPrice}
+                {this.state.showSortingMenu && results &&
+                    <div className="search-results">
+                        <SortingMenu
+                            sortedByPrice={this.state.sortedByPrice}
+                            sortByPrice={this.sortByPrice}
 
-                        sortedByRating={this.state.sortedByRating}
-                        sortByRating={this.sortByRating}
-                        
-                        sortedBySavings={this.state.sortedBySavings}
-                        sortBySavings={this.sortBySavings}
-                    />
+                            sortedByRating={this.state.sortedByRating}
+                            sortByRating={this.sortByRating}
+                            
+                            sortedBySavings={this.state.sortedBySavings}
+                            sortBySavings={this.sortBySavings}
+                        />
+                        <Deals results={results} />
+                    </div>
                 }
-                <Deals results={results} />
             </div>
         );
     }

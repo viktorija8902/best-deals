@@ -15,6 +15,37 @@
     .hotel-info {
       display: flex;
       width: 50%;
+      .hotel-image {
+        position: relative;
+        .savings-box, .savings-box-corner {
+          position: absolute;
+          left: -9px;
+        }
+        .savings-box {
+          top: 11px;
+          border-radius: 2px;
+          background-image: linear-gradient(61deg, #f5515f, #9f041b);
+          width: 115px;
+          height: 64px;
+          box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.56);
+          .text, .small-text {
+            font-weight: bold;
+            color: $white;
+          }
+          .text {
+            font-size: 25px;
+            padding-top: 5px;
+          }
+          .small-text {
+            font-size: 18px;
+          }
+        }
+        .savings-box-corner {
+          top: 75px;
+          width: 9px;
+          height: 8px;
+        }
+      }
       img {
         width: 185px;
         height: 177px;
@@ -135,6 +166,29 @@
         width: 100%;
       }
       .hotel-info {
+        .hotel-image {
+          .savings-box, .savings-box-corner {
+            left: -5px;
+          }
+          .savings-box {
+            width: 66px;
+            height: 40px;
+            top: 8px;
+            background-image: linear-gradient(58deg, #f5515f, #9f041b);
+            .text {
+              font-size: 18px;
+              padding-top: 2px;
+            }
+            .small-text {
+              font-size: 10px;
+            }
+          }
+          .savings-box-corner {
+            top: 48px;
+            width: 5px;
+            height: 4px;
+          }
+        }
         img {
           width: 103px;
           height: 100px;

@@ -124,6 +124,9 @@
         .regular-price {
           color: $red;
         }
+        .not-valid {
+          text-decoration: line-through;
+        }
         .deal-price {
           color: $dark-green;
         }

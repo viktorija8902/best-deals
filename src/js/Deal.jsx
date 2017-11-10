@@ -20,6 +20,22 @@ class Deal extends Component {
     const amenities = this.props.hotelInfo.amenities.map((amenity) => {
       return <div key={amenity.toString()} className="amenity">{amenity}</div>
     })
+    let regularPriceBox;
+    if (this.props.hotelInfo.savings > 0) {
+      regularPriceBox = <div className="regular-price-box">
+                          <div className="regular-price not-valid">
+                            USD${this.props.hotelInfo.regular_price}
+                          </div>
+                          <img className="hotels-com-logo" src="images/hotels_com_logo.png" alt=""></img>
+                        </div>
+    } else {
+      regularPriceBox = <div className="regular-price-box">
+                          <div className="regular-price">
+                            USD${this.props.hotelInfo.regular_price}
+                          </div>
+                          <img className="hotels-com-logo" src="images/hotels_com_logo.png" alt=""></img>
+                        </div>
+    }
     return (
       <div className="deal">
         <div className="hotel-info">
@@ -40,12 +56,7 @@ class Deal extends Component {
         </div>
 
         <div className="prices">
-          <div className="regular-price-box">
-            <div className="regular-price">
-              USD${this.props.hotelInfo.regular_price}
-            </div>
-            <img className="hotels-com-logo" src="images/hotels_com_logo.png" alt=""></img>
-          </div>
+          {regularPriceBox}
           <div className="deal-price-box">
             <div className="deal-price">
               USD${this.props.hotelInfo.price}

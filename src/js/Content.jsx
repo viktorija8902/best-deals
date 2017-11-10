@@ -18,6 +18,7 @@ class Content extends Component {
             sortedByRating: false,
             sortedBySavings: false,
             showSortingMenu: false,
+            error: false,
         };
 
         this.handleCityChange = this.handleCityChange.bind(this);
@@ -47,9 +48,20 @@ class Content extends Component {
                 provider: "snaptravel" 
             })
         ).then(data => {
-            this.setState({
-                deals: data.hotels
-            })
+            if (data !== "Error") {
+                this.setState({
+                    deals: data.hotels,
+                    showSortingMenu: true,
+                    sortedByPrice: true,
+                    error: false,
+                })
+            } else {
+                this.setState({
+                    deals: [],
+                    showSortingMenu: false,
+                    error: true
+                })
+            }
         })
     }
 
@@ -61,9 +73,20 @@ class Content extends Component {
             provider: "retail" 
         })
         ).then(data => {
-            this.setState({
-                regularPrices: data.hotels
-            })
+            if (data !== "Error") {
+                this.setState({
+                    regularPrices: data.hotels,
+                    showSortingMenu: true,
+                    sortedByPrice: true,
+                    error: false,
+                })
+            } else {
+                this.setState({
+                    regularPrices: [],
+                    showSortingMenu: false,
+                    error: true
+                })
+            }
         })
     }
 
@@ -91,16 +114,10 @@ class Content extends Component {
         })
     }
 
-    showSortingMenu() {
-        this.setState({
-            showSortingMenu: true
-        })
-    }
 
     handleSubmit(event) {
         this.getDeals();
         this.getRegularPrices();
-        this.showSortingMenu();
     }
 
     findHotelsExistingInBothSystems() {
@@ -149,7 +166,7 @@ class Content extends Component {
                     <input placeholder="Check-Out" type="text" value={this.state.checkOut} onChange={this.handleCheckOutChange} />
                     <button onClick={this.handleSubmit}><img src="images/search_btn.png" alt="Search"></img></button>
                 </div>
-                {this.state.showSortingMenu && results &&
+                {!this.state.error && this.state.showSortingMenu && results &&
                     <div className="search-results">
                         <SortingMenu
                             sortedByPrice={this.state.sortedByPrice}
@@ -163,6 +180,9 @@ class Content extends Component {
                         />
                         <Deals results={results} />
                     </div>
+                }
+                {this.state.error &&
+                    <div className="error">Error!</div>
                 }
             </div>
         );

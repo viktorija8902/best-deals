@@ -1,0 +1,338 @@
+body {
+  margin: 0; }
+
+.App {
+  text-align: center; }
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px; }
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white; }
+
+.App-title {
+  font-size: 1.5em; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+.deals {
+  width: 1099px;
+  margin: 0 auto 82px auto; }
+  .deals .deal {
+    display: flex;
+    border-radius: 2px;
+    background-color: #ffffff;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.18);
+    padding: 21px 22px 25px 22px;
+    font-family: Lato;
+    margin-top: 22px; }
+    .deals .deal .hotel-info {
+      display: flex;
+      width: 50%; }
+      .deals .deal .hotel-info .hotel-image {
+        position: relative; }
+        .deals .deal .hotel-info .hotel-image .savings-box, .deals .deal .hotel-info .hotel-image .savings-box-corner {
+          position: absolute;
+          left: -9px; }
+        .deals .deal .hotel-info .hotel-image .savings-box {
+          top: 11px;
+          border-radius: 2px;
+          background-image: linear-gradient(61deg, #f5515f, #9f041b);
+          width: 115px;
+          height: 64px;
+          box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.56); }
+          .deals .deal .hotel-info .hotel-image .savings-box .text, .deals .deal .hotel-info .hotel-image .savings-box .small-text {
+            font-weight: bold;
+            color: #ffffff; }
+          .deals .deal .hotel-info .hotel-image .savings-box .text {
+            font-size: 25px;
+            padding-top: 5px; }
+          .deals .deal .hotel-info .hotel-image .savings-box .small-text {
+            font-size: 18px; }
+        .deals .deal .hotel-info .hotel-image .savings-box-corner {
+          top: 75px;
+          width: 9px;
+          height: 8px; }
+      .deals .deal .hotel-info img {
+        width: 185px;
+        height: 177px; }
+      .deals .deal .hotel-info .details {
+        padding: 5px 16px; }
+        .deals .deal .hotel-info .details .name, .deals .deal .hotel-info .details address {
+          color: #686868; }
+        .deals .deal .hotel-info .details .name {
+          width: 282px;
+          font-size: 22px;
+          font-weight: 600;
+          text-align: left; }
+        .deals .deal .hotel-info .details .address {
+          padding-top: 10px;
+          font-size: 12px;
+          text-align: left; }
+        .deals .deal .hotel-info .details .columns {
+          display: flex;
+          padding-top: 19px; }
+          .deals .deal .hotel-info .details .columns .left-column,
+          .deals .deal .hotel-info .details .columns .right-column {
+            width: 50%; }
+          .deals .deal .hotel-info .details .columns .left-column .stars {
+            display: flex; }
+            .deals .deal .hotel-info .details .columns .left-column .stars img {
+              width: 18px;
+              height: 18px; }
+          .deals .deal .hotel-info .details .columns .left-column .reviews {
+            padding-top: 17px;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: left;
+            color: #686868; }
+          .deals .deal .hotel-info .details .columns .right-column .amenities .amenity {
+            padding-top: 15px;
+            font-size: 16px;
+            font-weight: 500;
+            text-align: left;
+            color: #686868; }
+          .deals .deal .hotel-info .details .columns .right-column .amenities .amenity:first-child {
+            padding-top: 0px; }
+    .deals .deal .prices {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end; }
+      .deals .deal .prices .regular-price-box, .deals .deal .prices .deal-price-box {
+        width: 246px;
+        height: 177px;
+        border-radius: 5px;
+        border: solid 1px #d0021b; }
+        .deals .deal .prices .regular-price-box .regular-price, .deals .deal .prices .regular-price-box .deal-price, .deals .deal .prices .deal-price-box .regular-price, .deals .deal .prices .deal-price-box .deal-price {
+          height: 42px;
+          font-size: 35px;
+          text-align: center;
+          padding-top: 38px; }
+        .deals .deal .prices .regular-price-box .regular-price, .deals .deal .prices .deal-price-box .regular-price {
+          color: #d0021b; }
+        .deals .deal .prices .regular-price-box .not-valid, .deals .deal .prices .deal-price-box .not-valid {
+          text-decoration: line-through; }
+        .deals .deal .prices .regular-price-box .deal-price, .deals .deal .prices .deal-price-box .deal-price {
+          color: #417505; }
+        .deals .deal .prices .regular-price-box .hotels-com-logo, .deals .deal .prices .deal-price-box .hotels-com-logo {
+          width: 110px;
+          height: 15px;
+          padding-top: 38px; }
+        .deals .deal .prices .regular-price-box .view-details-btn, .deals .deal .prices .deal-price-box .view-details-btn {
+          width: 162px;
+          height: 44px;
+          margin: 23px auto 23px auto;
+          border-radius: 4px;
+          background-color: #4f9f22;
+          box-shadow: 0 2px 4px 0 rgba(79, 159, 34, 0.5); }
+          .deals .deal .prices .regular-price-box .view-details-btn .text, .deals .deal .prices .deal-price-box .view-details-btn .text {
+            padding-top: 10px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #ffffff;
+            text-align: center; }
+      .deals .deal .prices .regular-price-box {
+        margin-right: 20px; }
+
+@media (max-width: 1099px) {
+  .deals {
+    width: 351px;
+    margin: 18px auto 59px auto; }
+    .deals .deal {
+      display: block;
+      padding: 12px 10px; }
+      .deals .deal .hotel-info, .deals .deal .prices {
+        width: 100%; }
+      .deals .deal .hotel-info .hotel-image .savings-box, .deals .deal .hotel-info .hotel-image .savings-box-corner {
+        left: -5px; }
+      .deals .deal .hotel-info .hotel-image .savings-box {
+        width: 66px;
+        height: 40px;
+        top: 8px;
+        background-image: linear-gradient(58deg, #f5515f, #9f041b); }
+        .deals .deal .hotel-info .hotel-image .savings-box .text {
+          font-size: 18px;
+          padding-top: 2px; }
+        .deals .deal .hotel-info .hotel-image .savings-box .small-text {
+          font-size: 10px; }
+      .deals .deal .hotel-info .hotel-image .savings-box-corner {
+        top: 48px;
+        width: 5px;
+        height: 4px; }
+      .deals .deal .hotel-info img {
+        width: 103px;
+        height: 100px; }
+      .deals .deal .hotel-info .details {
+        padding: 5px 16px; }
+        .deals .deal .hotel-info .details .name {
+          width: 188px;
+          font-size: 16px; }
+        .deals .deal .hotel-info .details .address {
+          display: none; }
+        .deals .deal .hotel-info .details .columns {
+          padding-top: 8px; }
+          .deals .deal .hotel-info .details .columns .left-column .stars img {
+            width: 13px;
+            height: 12px; }
+          .deals .deal .hotel-info .details .columns .left-column .reviews {
+            padding-top: 12px;
+            font-size: 13px; }
+          .deals .deal .hotel-info .details .columns .right-column .amenities .amenity {
+            padding-top: 7px;
+            font-size: 13px; }
+      .deals .deal .prices {
+        justify-content: flex-start;
+        padding-top: 8px; }
+        .deals .deal .prices .regular-price-box, .deals .deal .prices .deal-price-box {
+          width: 162px;
+          height: 94px; }
+          .deals .deal .prices .regular-price-box .regular-price, .deals .deal .prices .regular-price-box .deal-price, .deals .deal .prices .deal-price-box .regular-price, .deals .deal .prices .deal-price-box .deal-price {
+            padding-top: 13px;
+            height: 27px;
+            font-size: 24px; }
+          .deals .deal .prices .regular-price-box .hotels-com-logo, .deals .deal .prices .deal-price-box .hotels-com-logo {
+            width: 71px;
+            height: 10px;
+            padding-top: 16px; }
+          .deals .deal .prices .regular-price-box .view-details-btn, .deals .deal .prices .deal-price-box .view-details-btn {
+            width: 108px;
+            height: 28px;
+            margin: 7px auto 19px auto; }
+            .deals .deal .prices .regular-price-box .view-details-btn .text, .deals .deal .prices .deal-price-box .view-details-btn .text {
+              padding-top: 4px;
+              font-size: 14px; }
+        .deals .deal .prices .regular-price-box {
+          margin-right: 7px; } }
+
+@media (max-width: 370px) {
+  .deals {
+    width: 98%; } }
+
+.header {
+  display: flex;
+  align-items: center; }
+  .header .title {
+    width: 146px;
+    font-size: 32px;
+    font-weight: 600;
+    color: #ff8314;
+    text-align: left;
+    padding-left: 15px; }
+  .header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background-color: #ff8314; }
+    .header .logo img {
+      width: 55px; }
+
+.search-form, .error {
+  width: 1099px;
+  margin: 22px auto 0 auto; }
+
+.search-form {
+  text-align: left;
+  display: flex; }
+  .search-form input, .search-form button {
+    height: 43px;
+    border-radius: 5px;
+    border: 0;
+    background-color: #ffffff;
+    box-shadow: 0 0 4px 0 #c4c4c4; }
+  .search-form input {
+    width: 129px;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    color: #787878;
+    padding: 0 0 0 13px;
+    margin-right: 22px; }
+  .search-form input:first-child {
+    width: 229px; }
+  .search-form button {
+    width: 46px;
+    box-shadow: 0 0 4px 0 #bbbbbb;
+    cursor: pointer; }
+    .search-form button img {
+      height: 21px; }
+
+.error {
+  padding-top: 25px;
+  text-align: left;
+  font-weight: bold;
+  color: #d0021b; }
+
+@media (max-width: 1099px) {
+  .search-form, .error {
+    width: 351px;
+    margin: 0 auto 0 auto; }
+  .search-form {
+    flex-wrap: wrap; }
+    .search-form input, .search-form button {
+      margin-top: 18px; }
+    .search-form input {
+      width: 129px;
+      margin-right: 7px; }
+    .search-form input:first-child {
+      width: 335px; } }
+
+@media (max-width: 370px) {
+  .search-form, .error {
+    width: 98%; } }
+
+@media (max-width: 350px) {
+  .search-form button {
+    width: 45%; } }
+
+.sorting-menu {
+  display: flex;
+  width: 1099px;
+  margin: auto; }
+  .sorting-menu .sorting-btn {
+    width: 357px;
+    height: 46px;
+    border-radius: 3px;
+    background-color: #f0f0f0;
+    margin-top: 18px;
+    margin-right: 15px;
+    padding-left: 16px;
+    border: 2px solid #f0f0f0;
+    cursor: pointer; }
+    .sorting-menu .sorting-btn .text {
+      font-family: Lato;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: #7c7c7c;
+      line-height: 0; }
+  .sorting-menu .sorting-btn.selected {
+    background-color: #ffffff;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .sorting-menu .sorting-btn.selected img {
+      height: 20px; }
+
+@media (max-width: 1099px) {
+  .sorting-menu {
+    display: block;
+    width: 351px; }
+    .sorting-menu .sorting-btn {
+      padding: 12px 10px;
+      width: 100%; } }
+
+@media (max-width: 370px) {
+  .sorting-menu {
+    width: 98%; } }

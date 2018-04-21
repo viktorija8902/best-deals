@@ -4,7 +4,7 @@ This is a task I did for one company when I applied for a software developer's j
 
 Make sure you have node and npm installed and run ```npm install``` and then ```npm start``` to test your application. To run your tests you can run ```npm test```.
 
-Deployed (here)[https://salty-eyrie-29576.herokuapp.com]
+Deployed here: https://salty-eyrie-29576.herokuapp.com
 
 
 ## TODO
